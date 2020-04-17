@@ -14,6 +14,8 @@ import {firestore, convertCollectionsSnapshotToMap} from '../../firebase/firebas
 const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);
 const CollectionPageWithSpinner = WithSpinner(CollectionPage);
 
+
+
 class ShopPage extends React.Component{
     state ={
     loading:true
@@ -23,13 +25,16 @@ class ShopPage extends React.Component{
     componentDidMount(){
         const {updateCollections} = this.props;
         const collectionRef = firestore.collection('collections');
-
-        collectionRef.onSnapshot(async snapshot => {
-         const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-         updateCollections(collectionsMap);
-         this.setState({loading: false});
+        // fetch('https://firestore.googleapis.com/v1/projects/clothing-website-ad4a6/databases/(default)/documents/collections')
+        // .then(response => response.json())
+        // .then(collections => console.log(collections));
+        collectionRef.get().then(snapshot => {
+            const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+            updateCollections(collectionsMap);
+            this.setState({loading: false});
         });
     }
+
     render(){
         const {match} = this.props;
         const {loading} = this.state;
