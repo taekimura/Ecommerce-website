@@ -48,8 +48,8 @@ export const ContentContainer = styled.div`
   justify-content: center;
   position: absolute;
   &:hover {
-    background-color:#DADDE4;
-    opacity: 0.6;
+    background-color:white;
+    opacity: 0.2;
 		}
 `;
 
@@ -62,6 +62,6 @@ export const ContentTitle = styled.span`
 
 export const ContentSubtitle = styled.span`
   font-weight: 700;
-  font-size: 15px;
-  color: #D44860;
+  font-size: 13px;
+  color: black;
 `;
