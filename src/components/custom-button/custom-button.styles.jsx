@@ -1,22 +1,22 @@
 import styled, {css} from 'styled-components';
 
 const buttonStyles =css`
-    background-color: black;
+    background-color: #766456;
     color:white;
     border: none;
     &:hover {
         background-color: white;
-        color: black;
-        border: 1px solid black;
+        color: #766456;
+        border: 1px solid #766456;
       }
 `
 
 const invertedButtonStyles = css`
     background-color: white;
-    color: black;
-    border: 1px solid black;
+    color: #766456;
+    border: 1px solid #766456;
     &:hover{
-    background-color: black;
+    background-color:#766456;
     color: white;
     border: none;
     }
