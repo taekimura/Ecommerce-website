@@ -1,10 +1,9 @@
 body{
     font-family: 'Open Sans Condensed', sans-serif;
-    padding: 20px 30px;
-    background-color:rgb(226, 224, 224);
-    opacity: 0.8;
+    padding: 0px;
+    background-color:white;
+    /* opacity: 0.8; */
 }
-
 a{
     text-decoration: none;
     color: black;

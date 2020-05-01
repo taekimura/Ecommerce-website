@@ -8,7 +8,7 @@ import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import {signOutStart} from '../../redux/user/user.actions';
 
-import { ReactComponent as Logo } from '../../assets/crown.svg'
+import { ReactComponent as Logo } from '../../assets/sozai.svg';
 
 import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from './header.styles';
 
@@ -23,9 +23,6 @@ const Header = ({currentUser, hidden, signOutStart }) => (
         </OptionLink>
         <OptionLink to="/shop">
             SHOP
-        </OptionLink>
-        <OptionLink to="/shop">
-            CONTACT
         </OptionLink>
         {
             currentUser?(

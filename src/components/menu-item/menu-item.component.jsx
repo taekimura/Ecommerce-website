@@ -22,7 +22,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
       <ContentTitle>{title.toUpperCase()}</ContentTitle>
       <ContentSubtitle>SHOP NOW</ContentSubtitle>
     </ContentContainer>
-  </MenuItemContainer>
+    </MenuItemContainer>
 );
 
 export default withRouter(MenuItem);

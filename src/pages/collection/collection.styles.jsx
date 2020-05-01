@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const CollectionPageContainer = styled.div`
+  font-family: 'Julius Sans One', sans-serif;
   display: flex;
   flex-direction: column;
+  margin : 0 20px 0 30px;
 `;
 
 export const CollectionTitle = styled.h2`
