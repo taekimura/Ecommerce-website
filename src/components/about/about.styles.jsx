@@ -20,7 +20,8 @@ export const CheckoutItemContainer = styled.div`
 export const HeaderImg = styled.img.attrs({
     src: 'https://i.ibb.co/F60gqL5/banner.png'
 })`
-margin-top: 30px;
+margin-top: 20px;
+width:90%;
 `
 
 export const TextContainer = styled.span`
