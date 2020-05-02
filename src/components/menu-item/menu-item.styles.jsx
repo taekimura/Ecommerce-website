@@ -25,7 +25,7 @@ export const MenuItemContainer = styled.div`
 	align-items: center;
 	justify-content: center;
   overflow: hidden;
-  margin: 35px 0px 0px 0px;
+  margin: 35px 10px 0px 10px;
 	&:hover {
 		cursor: pointer;
 		& .background-image {
@@ -63,6 +63,7 @@ export const ContentContainer = styled.div`
   justify-content: center;
   position: absolute;
   background-color:white;
+  // border: 0.5px solid #9F5752;
   opacity: 0.7;
   &:hover {
     background-color: #e4e4e4 ;

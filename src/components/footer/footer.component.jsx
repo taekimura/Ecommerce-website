@@ -1,13 +1,13 @@
 import React from 'react';
 
-import {FooterContainer, OptionsContainer, OptionLink} from './footer.styles';
+import {FooterContainer, OptionsContainer, OptionLink, Option} from './footer.styles';
 
 const Footer = () => (
     <FooterContainer>
         <OptionsContainer>
-        <OptionLink>
+        <Option>
         &copy;2020 developed by Tae
-        </OptionLink>
+        </Option>
         <OptionLink to="/about">
             F&amp;Q
         </OptionLink>
