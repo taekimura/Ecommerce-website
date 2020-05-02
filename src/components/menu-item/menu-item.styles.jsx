@@ -1,5 +1,20 @@
 import styled from 'styled-components';
 
+export const WrapContainer = styled.div`
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  
+`;
+
+export const ItemContainer = styled.div`
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  
+`;
+
+
 export const MenuItemContainer = styled.div`
   font-family: 'Bellota Text', cursive;
 	height: ${({ size }) => (size ? '360px' : '300px')};

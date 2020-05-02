@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const WrappedContainer = styled.div`
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  
+`;
+
 export const CheckoutPageContainer = styled.div`
   width: 55%;
   min-height: 100vh;

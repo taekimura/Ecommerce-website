@@ -8,7 +8,7 @@ export const CartItemContainer = styled.div`
 `;
 
 export const CartItemImage = styled.img`
-  width: 30%;
+  width: 25%;
 `;
 
 export const ItemDetailsContainer = styled.div`

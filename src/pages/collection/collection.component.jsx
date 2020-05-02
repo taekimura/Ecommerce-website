@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import CollectionItem from '../../components/collection-item/collection-item.component';
+import Footer from '../../components/footer/footer.component';
 
 import { selectCollection } from '../../redux/shop/shop.selectors';
 
@@ -21,6 +22,7 @@ const CollectionPage = ({ collection }) => {
           <CollectionItem key={item.id} item={item} />
         ))}
       </CollectionItemsContainer>
+      <Footer/>
     </CollectionPageContainer>
   );
 };

@@ -7,3 +7,11 @@ export const SignInAndSignUpContainer = styled.div`
   margin: 0px auto;
   background-color:white;
 `;
+
+export const BigContainer = styled.div`
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  
+`;
+

@@ -4,6 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+import Footer from '../../components/footer/footer.component';
 
 import {
   selectCartItems,
@@ -11,6 +12,7 @@ import {
 } from '../../redux/cart/cart.selectors';
 
 import {
+  WrappedContainer,
   CheckoutPageContainer,
   CheckoutHeaderContainer,
   HeaderBlockContainer,
@@ -19,6 +21,7 @@ import {
 } from './checkout.styles';
 
 const CheckoutPage = ({ cartItems, total }) => (
+  <WrappedContainer>
   <CheckoutPageContainer>
     <CheckoutHeaderContainer>
       <HeaderBlockContainer>
@@ -48,6 +51,8 @@ const CheckoutPage = ({ cartItems, total }) => (
     </WarningContainer>
     <StripeCheckoutButton price={total} />
   </CheckoutPageContainer>
+  <Footer/>
+  </WrappedContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

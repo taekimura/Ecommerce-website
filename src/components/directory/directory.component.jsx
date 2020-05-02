@@ -14,6 +14,7 @@ const Directory = ({ sections }) => (
       <MenuItem key={id} {...otherSectionProps} />
     ))}
   </DirectoryMenuContainer>
+  
 );
 
 const mapStateToProps = createStructuredSelector({
