@@ -48,10 +48,9 @@ export const ContentContainer = styled.div`
   justify-content: center;
   position: absolute;
   background-color:white;
-  opacity: 0.6;
+  opacity: 0.7;
   &:hover {
-    background-color:white;
-    opacity: 0.9;
+    background-color: #e4e4e4 ;
 		}
 `;
 

@@ -8,8 +8,8 @@ export const CollectionPageContainer = styled.div`
 `;
 
 export const CollectionTitle = styled.h2`
-  font-size: 38px;
-  margin: 0 auto 30px;
+  font-size: 25px;
+  margin: 80px auto 30px;
 `;
 
 export const CollectionItemsContainer = styled.div`
