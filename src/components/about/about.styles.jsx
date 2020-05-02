@@ -8,7 +8,7 @@ export const DaiContainer = styled.div`
 `;
 
 export const CheckoutItemContainer = styled.div`
-  font-family: 'Bellota Text', cursive;
+  font-family: 'Julius Sans One', sans-serif;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -20,7 +20,7 @@ export const CheckoutItemContainer = styled.div`
 export const HeaderImg = styled.img.attrs({
     src: 'https://i.ibb.co/F60gqL5/banner.png'
 })`
-margin-top: 60px;
+margin-top: 30px;
 `
 
 export const TextContainer = styled.span`
