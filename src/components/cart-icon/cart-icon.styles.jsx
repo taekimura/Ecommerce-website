@@ -18,7 +18,7 @@ export const ShoppingIcon = styled(ShoppingIconSVG)`
   &:hover {
     transform: scale(1.1);
     transition: transform 1s;
-        }
+    }   
 `;
 
 export const ItemCountContainer = styled.span`

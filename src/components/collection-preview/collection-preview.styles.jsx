@@ -5,6 +5,12 @@ export const CollectionPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin : 0 20px 0 20px;
+  @media screen and (max-width: 800px) {
+    margin : 5;
+  }
+  @media screen and (max-width: 450px) {
+    margin : 0;
+  }
 `;
 
 export const TitleContainer = styled.h1`
@@ -20,4 +26,14 @@ export const TitleContainer = styled.h1`
 export const PreviewContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3px;
+  }
+  @media screen and (max-width: 450px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+  }
 `;

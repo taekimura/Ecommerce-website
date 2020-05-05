@@ -7,6 +7,13 @@ export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color:white;
+
+  @media screen and (max-width: 520px) {
+    width: 90%;
+  }
+  @media screen and (min-width: 521px) and (max-width: 800px) {
+    width: 80%;
+  }
 `;
 
 export const SignInTitle = styled.h2`

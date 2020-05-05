@@ -23,14 +23,19 @@ export const OptionLink = styled(Link)`
     padding: 0px 50px 0px 10px;
     cursor: pointer;
     &:hover {
-        color: #9F5752;
-        // transform: scale(1.1);
-        // transition: transform 1s;
-            }
+    color: #9F5752;
+    }
+    @media screen and (max-width: 450px) {
+    padding: 0px 0px 0px 20px;
+    font-size: 15px;
+    }
 `;
 
 export const Option = styled(Link)`
     padding: 0px 50px 0px 0px;
     cursor: pointer;
-    
+    @media screen and (max-width: 450px) {
+    padding: 0px;
+    font-size: 5px;
+    } 
 `;

@@ -4,7 +4,6 @@ export const WrappedContainer = styled.div`
   display: flex;
   flex-direction: column; 
   justify-content: space-between;
-  
 `;
 
 export const CheckoutPageContainer = styled.div`
@@ -17,6 +16,9 @@ export const CheckoutPageContainer = styled.div`
   button {
     margin-left: auto;
     margin-top: 50px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 90%;
   }
 `;
 

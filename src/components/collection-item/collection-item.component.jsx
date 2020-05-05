@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+// import { withRouter } from 'react-router-dom';
 import { addItem } from '../../redux/cart/cart.actions';
 
 
 import {
+  // DetailsButton,
   CollectionItemContainer,
   CollectionFooterContainer,
   AddButton,
@@ -14,7 +15,7 @@ import {
   // OptionLink,
 } from './collection-item.styles';
 
-const CollectionItem = ({ item, addItem }) => {
+const CollectionItem = ({ item, addItem ,itemType }) => {
   const { name, price, imageUrl } = item;
 
   return (
@@ -24,6 +25,11 @@ const CollectionItem = ({ item, addItem }) => {
         <NameContainer>{name}</NameContainer>
         <PriceContainer> ${price}</PriceContainer>
       </CollectionFooterContainer>
+      {/* <DetailsButton
+        onClick={() => {
+          history.push('/about');
+        }}
+      >Details</DetailsButton> */}
       {/* <OptionLink to={`shop/${itemType}`}>
             Details
       </OptionLink> */}

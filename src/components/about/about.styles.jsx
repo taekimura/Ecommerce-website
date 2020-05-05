@@ -4,7 +4,6 @@ export const DaiContainer = styled.div`
   display: flex;
   flex-direction: column; 
   justify-content: space-between;
-  
 `;
 
 export const CheckoutItemContainer = styled.div`
@@ -21,6 +20,10 @@ export const HeaderImg = styled.img.attrs({
     src: 'https://i.ibb.co/F60gqL5/banner.png'
 })`
 width:90%;
+@media screen and (max-width: 800px) {
+  width:180%;
+  margin-botton:30px;
+}
 `
 
 export const TextContainer = styled.span`
@@ -28,5 +31,10 @@ export const TextContainer = styled.span`
   width: 100%;
   font-size:18px;
   text-align:center;
-  margin-top: 50px
+  margin-top: 50px;
+  @media screen and (max-width: 800px) {
+    margin-top: 70px;
+    width: 120%;
+    font-size:15px;
+  }
 `;

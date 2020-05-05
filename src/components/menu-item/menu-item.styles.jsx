@@ -4,16 +4,14 @@ export const WrapContainer = styled.div`
   display: flex;
   flex-direction: column; 
   justify-content: space-between;
-  
+  margin:0;
 `;
 
 export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column; 
   justify-content: space-between;
-  
 `;
-
 
 export const MenuItemContainer = styled.div`
   font-family: 'Bellota Text', cursive;
@@ -35,16 +33,12 @@ export const MenuItemContainer = styled.div`
 		& .content {
 			opacity: 0.8;
 		}
-	}
+  }
+  @media screen and (max-width: 800px) {
+    height: 300px;
+    width: 100%;
+  }
 `;
-// border: 1px solid black;
-// margin: 0 7.5px 15px;
-// &:first-child {
-//   margin-right: 7.5px;
-// }
-// &:last-child {
-//   margin-left: 7.5px;
-// }
 
 export const BackgroundImageContainer = styled.div`
   width: 100%;
@@ -63,7 +57,6 @@ export const ContentContainer = styled.div`
   justify-content: center;
   position: absolute;
   background-color:white;
-  // border: 0.5px solid #9F5752;
   opacity: 0.7;
   &:hover {
     background-color: #e4e4e4 ;

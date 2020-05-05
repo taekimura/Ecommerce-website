@@ -16,7 +16,7 @@ overflow: hidden;
   
 @media screen and (max-width: 1630px) {
   left: 16px;
-    }
+  }
   
 display: flex;
 align-items: center;

@@ -5,6 +5,12 @@ export const CollectionPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin : 0 20px 0 30px;
+  @media screen and (max-width: 800px) {
+    margin : 0 20px 0 30px;
+  }
+  @media screen and (max-width: 450px) {
+    margin : 0 10px;
+  }
 `;
 
 export const CollectionTitle = styled.h2`
@@ -18,5 +24,9 @@ export const CollectionItemsContainer = styled.div`
   grid-gap: 10px;
   & > div {
     margin-bottom: 30px;
+  }
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
   }
 `;

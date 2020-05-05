@@ -4,7 +4,6 @@ export const DaiContainer = styled.div`
   display: flex;
   flex-direction: column; 
   justify-content: space-between;
-  
 `;
 
 export const AboutContainer = styled.div`
@@ -13,5 +12,4 @@ export const AboutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0px auto 0;
-  
 `;
