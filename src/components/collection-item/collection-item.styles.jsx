@@ -8,7 +8,9 @@ export const CollectionItemContainer = styled.div`
   flex-direction: column;
   height: 350px;
   align-items: center;
+  justify-content: space-between;
   position: relative;
+  margin-bottom: 80px;
   &:hover {
     .image {
       opacity: 0.8;
@@ -43,6 +45,9 @@ export const AddButton = styled(CustomButton)`
   position: absolute;
   top: 255px;
   display: none;
+  @media screen and (max-width: 800px) {
+    top: 235px;
+  }
 `;
 
 export const OptionLink = styled(Link)`
@@ -68,24 +73,23 @@ export const CollectionFooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-size: 18px;
+  }
 `;
 
 export const NameContainer = styled.span`
   width: 90%;
-  margin-bottom: 15px;
-  @media screen and (max-width: 450px) {
-    width: 80%;
-    font-size:10px;
-   
-  }
+  margin-bottom: 5px;
+  font-size: 18px;
 `;
 
 export const PriceContainer = styled.span`
   width: 10%;
-  text-align: right;
-  @media screen and (max-width: 450px) { 
-    width: 20%;
-    font-size:10px;
-    text-align: left;
-  }
+  font-size: 20px;
 `;

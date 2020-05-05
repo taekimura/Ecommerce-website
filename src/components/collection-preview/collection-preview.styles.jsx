@@ -34,6 +34,6 @@ export const PreviewContainer = styled.div`
   @media screen and (max-width: 450px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1px;
+    grid-gap: 4px;
   }
 `;
