@@ -5,12 +5,13 @@ import { createStructuredSelector } from 'reselect';
 
 import './App.css';
 
+import Notification from './components/notification/notification';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import AboutPage from './pages/about/about.component';
-
+import DetailsPage from './pages/details/details.component';
 import Header from './components/header/header.component';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
@@ -22,12 +23,15 @@ const App = ({ checkUserSession,currentUser }) => {
     },[checkUserSession]);
     return (
       <div>
+        <Notification />
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
           <Route path='/about' component={AboutPage} />
           <Route exact path='/checkout' component={CheckoutPage} />
+          {/* <Route exact path='/details/:details' component={DetailsPage} /> */}
+          
           <Route
             exact
             path='/signin'
@@ -40,6 +44,9 @@ const App = ({ checkUserSession,currentUser }) => {
             }
           />
         </Switch>
+        {/* <CollectionItem/>
+          <Route path='/shop' component={ShopPage} />
+          <Route path='/about' component={AboutPage} /> */}
       </div>
     );
   }

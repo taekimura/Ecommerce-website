@@ -11,7 +11,8 @@ import {
     CartDropdownContainer,
     CartDropdownButton,
     EmptyMessageContainer,
-    CartItemsContainer
+    CartItemsContainer,
+    MessageContainer
   } from './cart-dropdown.styles';
   
 
@@ -23,7 +24,11 @@ import {
             <CartItem key={cartItem.id} item={cartItem} />
           ))
         ) : (
-          <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
+          <EmptyMessageContainer>
+            Your cart is empty <br/><br/>
+            <MessageContainer>Click the cart icon again to close your cart box</MessageContainer>
+          </EmptyMessageContainer>
+          
         )}
       </CartItemsContainer>
       <CartDropdownButton

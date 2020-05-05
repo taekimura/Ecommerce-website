@@ -1,6 +1,7 @@
 import { takeLatest, put, all, call } from 'redux-saga/effects';
 
 import UserActionTypes from './user.types';
+import { triggerNotification } from '../../components/notification/notification';
 
 import {
   signInSuccess,
@@ -27,6 +28,7 @@ export function* getSnapshotFromUserAuth(userAuth, additionalData) {
     );
     const userSnapshot = yield userRef.get();
     yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
+    yield triggerNotification('Signed In Successfully')
   } catch (error) {
     yield put(signInFailure(error));
   }
@@ -38,6 +40,7 @@ export function* signInWithGoogle() {
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
     yield put(signInFailure(error));
+    yield triggerNotification('There Was An Error Signing You In')
   }
 }
 
@@ -47,6 +50,7 @@ export function* signInWithEmail({ payload: { email, password } }) {
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
     yield put(signInFailure(error));
+    yield triggerNotification('There Was An Error Signing You In ')
   }
 }
 
@@ -64,6 +68,7 @@ export function* signOut() {
   try {
     yield auth.signOut();
     yield put(signOutSuccess());
+    yield triggerNotification('Signed Out Successfully')
   } catch (error) {
     yield put(signOutFailure(error));
   }

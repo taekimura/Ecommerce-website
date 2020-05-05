@@ -25,7 +25,7 @@ export const MenuItemContainer = styled.div`
 	align-items: center;
 	justify-content: center;
   overflow: hidden;
-  margin: 35px 10px 0px 10px;
+  margin: 20px 0px 0px 0px;
 	&:hover {
 		cursor: pointer;
 		& .background-image {

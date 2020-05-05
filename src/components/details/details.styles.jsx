@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 import CustomButton from '../custom-button/custom-button.component';
 
 export const CollectionItemContainer = styled.div`
@@ -28,13 +27,14 @@ export const AddButton = styled(CustomButton)`
   display: none;
 `;
 
-export const OptionLink = styled(Link)`
+export const DetailsButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;
-  top: 0px;
-  // display: none;
+  top: 200px;
+  display: none;
 `;
+
 
 export const BackgroundImage = styled.div`
   width: 100%;

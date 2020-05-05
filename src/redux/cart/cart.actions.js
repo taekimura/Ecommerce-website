@@ -22,3 +22,13 @@ export const clearItemFromCart = item =>({
 export const clearCart = () => ({
     type: CartActionTypes.CLEAR_CART
 });
+
+export const purchaseSuccess = message => ({
+    type: CartActionTypes.ON_PURCHASE_SUCCESS,
+    payload: message
+})
+  
+  export const purchaseFailure = errorMessage => ({
+    type: CartActionTypes.ON_PURCHASE_FAILURE,
+    payload: errorMessage
+})

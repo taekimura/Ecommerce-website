@@ -30,7 +30,7 @@ export const OptionLink = styled(Link)`
 `;
 
 export const Option = styled(Link)`
-    padding: 0px 50px 0px 10px;
+    padding: 0px 50px 0px 0px;
     cursor: pointer;
     
 `;

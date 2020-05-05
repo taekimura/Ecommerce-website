@@ -10,7 +10,7 @@ export const DaiContainer = styled.div`
 export const CheckoutItemContainer = styled.div`
   font-family: 'Julius Sans One', sans-serif;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,6 @@ export const CheckoutItemContainer = styled.div`
 export const HeaderImg = styled.img.attrs({
     src: 'https://i.ibb.co/F60gqL5/banner.png'
 })`
-margin-top: 20px;
 width:90%;
 `
 

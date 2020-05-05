@@ -4,6 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+import EmptyCart from '../../components/empty-cart/empty-cart.component';
 import Footer from '../../components/footer/footer.component';
 
 import {
@@ -21,6 +22,7 @@ import {
 } from './checkout.styles';
 
 const CheckoutPage = ({ cartItems, total }) => (
+  cartItems.length > 0 ? (
   <WrappedContainer>
   <CheckoutPageContainer>
     <CheckoutHeaderContainer>
@@ -53,6 +55,11 @@ const CheckoutPage = ({ cartItems, total }) => (
   </CheckoutPageContainer>
   <Footer/>
   </WrappedContainer>
+   ) : (
+    <WrappedContainer>
+      <EmptyCart />
+    </WrappedContainer>
+  )
 );
 
 const mapStateToProps = createStructuredSelector({

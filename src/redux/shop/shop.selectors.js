@@ -28,3 +28,8 @@ export const selectIsCollectionsLoaded = createSelector(
   [selectShop],
   shop => !!shop.collections
 );
+
+// export const selectCollectionItem = collectionUrlParam =>
+//   createSelector([selectCollectionsItem], items =>
+//     items ? items[collectionUrlParam] : null
+//   );

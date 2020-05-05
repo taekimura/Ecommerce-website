@@ -6,8 +6,9 @@ export const HeaderContainer = styled.div`
     height: 50px;
     width: 100%;
     display: flex;
-    position:fixed;
-    z-index:99;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     justify-content: space-between;
     margin-bottom: 0px;
     margin-top: 0;

@@ -10,7 +10,8 @@ import {
   AddButton,
   BackgroundImage,
   NameContainer,
-  PriceContainer
+  PriceContainer,
+  // OptionLink,
 } from './collection-item.styles';
 
 const CollectionItem = ({ item, addItem }) => {
@@ -23,6 +24,9 @@ const CollectionItem = ({ item, addItem }) => {
         <NameContainer>{name}</NameContainer>
         <PriceContainer> ${price}</PriceContainer>
       </CollectionFooterContainer>
+      {/* <OptionLink to={`shop/${itemType}`}>
+            Details
+      </OptionLink> */}
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart
       </AddButton>
@@ -31,6 +35,7 @@ const CollectionItem = ({ item, addItem }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+  // fetchItemById: id => dispatch(fetchItemById(id)),
   addItem: item => dispatch(addItem(item))
 });
 
