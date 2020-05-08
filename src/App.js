@@ -30,7 +30,7 @@ const App = ({ checkUserSession,currentUser }) => {
           <Route path='/shop' component={ShopPage} />
           <Route path='/about' component={AboutPage} />
           <Route exact path='/checkout' component={CheckoutPage} />
-          {/* <Route exact path='/details/:details' component={DetailsPage} /> */}
+          <Route exact path='/details/:id' component={DetailsPage} />
           
           <Route
             exact
@@ -44,9 +44,6 @@ const App = ({ checkUserSession,currentUser }) => {
             }
           />
         </Switch>
-        {/* <CollectionItem/>
-          <Route path='/shop' component={ShopPage} />
-          <Route path='/about' component={AboutPage} /> */}
       </div>
     );
   }

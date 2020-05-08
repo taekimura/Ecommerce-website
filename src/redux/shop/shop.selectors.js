@@ -29,6 +29,11 @@ export const selectIsCollectionsLoaded = createSelector(
   shop => !!shop.collections
 );
 
+export const selectCollectionsItem = (id)=> createSelector(
+  [selectShop],
+  collections => collections.find(collections=>collections.id===id)
+  );
+
 // export const selectCollectionItem = collectionUrlParam =>
 //   createSelector([selectCollectionsItem], items =>
 //     items ? items[collectionUrlParam] : null
