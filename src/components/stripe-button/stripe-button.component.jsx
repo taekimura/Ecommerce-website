@@ -6,13 +6,12 @@ import { purchaseSuccess, purchaseFailure,clearCart } from '../../redux/cart/car
 
 const P_KEY=process.env.REACT_APP_API_KEY;
 
-const StripeCheckoutButton = ({ price ,purchaseSuccess,clearCart, purchaseFailure}) => {
+const StripeCheckoutButton = ({ price, purchaseSuccess, clearCart, purchaseFailure}) => {
   const priceForStripe = price * 100;
   const publishableKey = P_KEY;
   
 
   const onToken = token => {
-    // console.log(token);
     alert('Payment Succesful!');
     clearCart();
   };
