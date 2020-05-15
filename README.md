@@ -1,3 +1,6 @@
+![sozai](https://user-images.githubusercontent.com/55253319/82088422-919dd900-96a6-11ea-8002-626229da4590.jpg)
+
+
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
