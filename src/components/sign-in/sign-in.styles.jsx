@@ -29,5 +29,5 @@ export const ButtonsBarContainer = styled.div`
   button {
     margin-bottom: 16px;
   }
-  }
+}
 `;
