@@ -17,6 +17,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Firebase api key and Stripe publish key
 .env
 
 npm-debug.log*

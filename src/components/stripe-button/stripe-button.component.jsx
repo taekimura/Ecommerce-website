@@ -4,9 +4,12 @@ import StripeCheckout from 'react-stripe-checkout';
 import { connect } from 'react-redux';
 import { purchaseSuccess, purchaseFailure,clearCart } from '../../redux/cart/cart.actions';
 
+const P_KEY=process.env.REACT_APP_API_KEY;
+
 const StripeCheckoutButton = ({ price ,purchaseSuccess,clearCart, purchaseFailure}) => {
   const priceForStripe = price * 100;
-  const publishableKey = 'pk_test_WBqax2FWVzS9QlpJScO07iuL';
+  const publishableKey = P_KEY;
+  
 
   const onToken = token => {
     // console.log(token);
