@@ -1,3 +1,8 @@
+## E-commerce website
+
+The project for a fictional clothing store with use login, google integration, cart management and stripe payments.
+Built using React, Redux and Firebase, This website is the starting point on an e-commerce site. Inventory and users are stored on Firebase, items can be added to your own cart and a mock checkout can be done using Stripe test payments.
+
 ![sozai](https://user-images.githubusercontent.com/55253319/82088422-919dd900-96a6-11ea-8002-626229da4590.jpg)
 
 
