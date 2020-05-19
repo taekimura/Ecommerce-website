@@ -35,7 +35,6 @@
 //   display: none;
 // `;
 
-
 // export const BackgroundImage = styled.div`
 //   width: 100%;
 //   height: 95%;
