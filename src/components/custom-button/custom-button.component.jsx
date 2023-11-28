@@ -1,9 +1,11 @@
 import React from 'react';
 
-import { CustomButtonContainer } from './custom-button.styles';
+import { ButtonSpinner, CustomButtonContainer } from './custom-button.styles';
 
-const CustomButton = ({ children, ...props }) => (
-  <CustomButtonContainer {...props}>{children}</CustomButtonContainer>
+const CustomButton = ({ isLoading, children, ...props }) => (
+  <CustomButtonContainer disabled={isLoading} {...props}>
+    {isLoading ? <ButtonSpinner /> : children}
+  </CustomButtonContainer>
 );
 
 export default CustomButton;

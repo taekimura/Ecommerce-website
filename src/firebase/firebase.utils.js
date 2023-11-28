@@ -1,18 +1,18 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const KEY = process.env.REACT_APP_API_KEY;
 
 const config = {
   apiKey: KEY,
-  authDomain: "clothing-website-ad4a6.firebaseapp.com",
-  databaseURL: "https://clothing-website-ad4a6.firebaseio.com",
-  projectId: "clothing-website-ad4a6",
-  storageBucket: "clothing-website-ad4a6.appspot.com",
-  messagingSenderId: "356614758956",
-  appId: "1:356614758956:web:9872982bd052d0e42f6789",
-  measurementId: "G-JEFCB73TE9",
+  authDomain: 'clothing-website-ad4a6.firebaseapp.com',
+  databaseURL: 'https://clothing-website-ad4a6.firebaseio.com',
+  projectId: 'clothing-website-ad4a6',
+  storageBucket: 'clothing-website-ad4a6.appspot.com',
+  messagingSenderId: '356614758956',
+  appId: '1:356614758956:web:9872982bd052d0e42f6789',
+  measurementId: 'G-JEFCB73TE9'
 };
 
 firebase.initializeApp(config);
@@ -32,10 +32,10 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData,
+        ...additionalData
       });
     } catch (error) {
-      console.log("error creating user", error.message);
+      console.log('error creating user', error.message);
     }
   }
 
@@ -65,7 +65,7 @@ export const convertCollectionsSnapshotToMap = (collections) => {
       routeName: encodeURI(title.toLowerCase()),
       id: doc.id,
       title,
-      items,
+      items
     };
   });
 
@@ -88,7 +88,7 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
-googleProvider.setCustomParameters({ prompt: "select_account" });
+googleProvider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;
