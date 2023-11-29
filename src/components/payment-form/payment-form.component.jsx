@@ -65,7 +65,6 @@ const PaymentForm = ({ price }) => {
     <PaymentFormContainer>
       <FormContainer onSubmit={paymentHandler}>
         <h2>Credit card payment</h2>
-        <br />
         <CardElement />
         <CustomButton isLoading={isProcessingPayment}>Pay Now</CustomButton>
       </FormContainer>

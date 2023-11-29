@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const WrappedContainer = styled.div`
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-between;
 `;
 
@@ -23,7 +23,7 @@ export const CheckoutPageContainer = styled.div`
 `;
 
 export const CheckoutHeaderContainer = styled.div`
-  margin-top:100px;
+  margin-top: 100px;
   width: 100%;
   height: 40px;
   display: flex;
@@ -48,6 +48,6 @@ export const TotalContainer = styled.div`
 export const WarningContainer = styled.div`
   text-align: center;
   margin-top: 40px;
-  font-size: 24px;
+  font-size: 20px;
   color: red;
 `;
