@@ -11,7 +11,12 @@ import CustomButton from '../custom-button/custom-button.component';
 import { useSelector } from 'react-redux';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
-const PaymentForm = ({ price }) => {
+const PaymentForm = ({
+  price,
+  purchaseSuccess,
+  purchaseFailure,
+  clearCart
+}) => {
   const stripe = useStripe();
   const elements = useElements();
   const currentUser = useSelector(selectCurrentUser);
@@ -51,11 +56,12 @@ const PaymentForm = ({ price }) => {
         alert(paymentResult.error);
       } else {
         if (paymentResult.paymentIntent.status === 'succeeded') {
-          alert('Payment Successful');
+          purchaseSuccess();
         }
       }
     } catch (error) {
       console.log(error);
+      purchaseFailure();
     } finally {
       setProcessingPayment(false);
     }

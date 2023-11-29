@@ -28,7 +28,7 @@ export function* getSnapshotFromUserAuth(userAuth, additionalData) {
     );
     const userSnapshot = yield userRef.get();
     yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
-    yield triggerNotification('Signed In Successfully')
+    yield triggerNotification('Signed In Successfully');
   } catch (error) {
     yield put(signInFailure(error));
   }
@@ -39,8 +39,8 @@ export function* signInWithGoogle() {
     const { user } = yield auth.signInWithPopup(googleProvider);
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
+    yield alert(error.message);
     yield put(signInFailure(error));
-    yield triggerNotification('There Was An Error Signing You In')
   }
 }
 
@@ -49,8 +49,8 @@ export function* signInWithEmail({ payload: { email, password } }) {
     const { user } = yield auth.signInWithEmailAndPassword(email, password);
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
+    yield alert(error.message);
     yield put(signInFailure(error));
-    yield triggerNotification('There Was An Error Signing You In ')
   }
 }
 
@@ -68,7 +68,7 @@ export function* signOut() {
   try {
     yield auth.signOut();
     yield put(signOutSuccess());
-    yield triggerNotification('Signed Out Successfully')
+    yield triggerNotification('Signed Out Successfully');
   } catch (error) {
     yield put(signOutFailure(error));
   }
@@ -79,6 +79,7 @@ export function* signUp({ payload: { email, password, displayName } }) {
     const { user } = yield auth.createUserWithEmailAndPassword(email, password);
     yield put(signUpSuccess({ user, additionalData: { displayName } }));
   } catch (error) {
+    yield alert(error.message);
     yield put(signUpFailure(error));
   }
 }
