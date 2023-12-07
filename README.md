@@ -1,4 +1,4 @@
-## :handbag: E-commerce website :womans_clothes:
+## E-commerce website
 
 The project for a fictional clothing store with use login, google integration, cart management and stripe payments.
 Built using React, Redux and Firebase, This website is the starting point on an e-commerce site. Inventory and users are stored on Firebase, items can be added to your own cart and a mock checkout can be done using Stripe test payments.
